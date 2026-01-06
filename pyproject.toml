@@ -11,14 +11,35 @@ name = "snakemake-logger-plugin-pypsa"
 version = "0.1.0"
 description = "A PyPSA-Eur logger plugin for Snakemake"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
     { name = "PyPSA-Eur Contributors", email = "will.usher@openenergytransition.org" },
 ]
 dependencies = [
-    "snakemake-interface-logger-plugins>=1.2.0",
+    "snakemake-interface-logger-plugins >=1.2.0,<2"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
 ]
 
 [project.entry-points."snakemake.plugins.logger"]
 pypsa = "snakemake_logger_plugin_pypsa:LogHandler"
+
+[project.urls]
+homepage = "https://github.com/pypsa/pypsa-eur"
+repository = "https://github.com/pypsa/pypsa-eur"
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+snakemake-logger-plugin-pypsa = { path = ".", editable = true }
+
+[tool.pixi.tasks]
