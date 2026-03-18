@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "snakemake-logger-plugin-pypsa"
-version = "0.1.0"
+version = "0.2.0"
 description = "A PyPSA-Eur logger plugin for Snakemake"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -17,7 +17,7 @@ authors = [
     { name = "PyPSA-Eur Contributors", email = "will.usher@openenergytransition.org" },
 ]
 dependencies = [
-    "snakemake-interface-logger-plugins >=1.2.0,<2"
+    "snakemake-interface-logger-plugins >=2,<3"
 ]
 
 classifiers = [
